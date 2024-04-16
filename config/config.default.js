@@ -14,11 +14,15 @@ module.exports = (appInfo) => {
   config.keys = appInfo.name + "_1712908325639_9406";
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = [ "errorHandler" ];
 
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
+    cors: {
+      domainWhiteList: [ "http://localhost:4200" ],
+      allowMethods: "GET,HEAD,PUT,POST,DELETE,PATCH",
+    },
     mongoose: {
       clients: {
         test: {

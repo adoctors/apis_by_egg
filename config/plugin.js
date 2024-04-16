@@ -9,4 +9,14 @@ module.exports = {
     enable: true,
     package: "egg-mongoose",
   },
+
+  cors: {
+    enable: true,
+    package: "egg-cors",
+  },
+
+  validate: {
+    enable: true,
+    package: "egg-validate",
+  },
 };

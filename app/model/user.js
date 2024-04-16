@@ -11,7 +11,7 @@ module.exports = (app) => {
   const Schema = mongoose.Schema;
   const conn = app.mongooseDB.get("test");
   const UserSchema = new Schema({
-    userName: { type: String },
+    name: { type: String },
     password: { type: String },
     email: { type: String },
   });

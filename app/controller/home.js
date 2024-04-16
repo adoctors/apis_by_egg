@@ -5,10 +5,8 @@ class HomeController extends Controller {
     const { ctx } = this;
 
     const result = await ctx.model.User.find({});
-
     console.log(result);
-
-    ctx.body = "hi, egg";
+    ctx.helper.success({ ctx });
   }
 }
 
