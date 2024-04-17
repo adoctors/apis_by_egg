@@ -6,15 +6,9 @@
  * @LastEditors: kl
  */
 
-module.exports = (app) => {
-  const mongoose = app.mongoose;
-  const Schema = mongoose.Schema;
-  const conn = app.mongooseDB.get("test");
-  const UserSchema = new Schema({
-    name: { type: String },
-    password: { type: String },
-    email: { type: String },
-  });
+const { userSchema } = require("../const/schema");
 
-  return conn.model("User", UserSchema);
+module.exports = (app) => {
+  const conn = app.mongooseDB.get("test");
+  return conn.model("User", userSchema);
 };
