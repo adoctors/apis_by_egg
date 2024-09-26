@@ -26,12 +26,12 @@ module.exports = (appInfo) => {
     mongoose: {
       clients: {
         test: {
-          url: "mongodb://127.0.0.1/test",
+          url: "mongodb://127.0.0.1/test_api",
           options: {},
           plugins: [],
         },
         prod: {
-          url: "mongodb://127.0.0.1/prod",
+          url: "mongodb://127.0.0.1/prod_api",
           options: {},
           plugins: [],
         },
